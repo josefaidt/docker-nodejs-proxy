@@ -10,7 +10,7 @@ Simple reverse proxy with dynamic routing
    ```shell
    docker run --name proxy \
      --hostname APP_PROXY \
-     -p 3000:3000 \
+     -p 80:3000 \
      -e route_proxy_request="http://172.20.0.1:3001/request" \
      -e route_proxy_metrics="http://172.20.0.2:3002/metrics" \
      -e route_redirect_watch="https://app.plex.tv/" \
