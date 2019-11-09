@@ -1,0 +1,25 @@
+{
+  "name": "docker-nodejs-proxy",
+  "author": "Josef Aidt <josef.aidt@gmail.com>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "start:prod": "node index.js",
+    "build": "docker build --tag josefaidt/my-proxy-app:$npm_package_version --tag josefaidt/my-proxy-app:latest .",
+    "build:remote": "docker build https://github.com/josefaidt/docker-nodejs-proxy.git"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy": "^1.18.0"
+  },
+  "devDependencies": {
+    "@josefaidt/eslint-config": "^0.1.10",
+    "eslint": "^6.6.0",
+    "nodemon": "^1.19.4"
+  },
+  "eslintConfig": {
+    "extends": "@josefaidt/eslint-config"
+  },
+  "license": "MIT"
+}
